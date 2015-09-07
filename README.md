@@ -8,3 +8,4 @@ A GUI for creating and displaying phase masks for a Liquid Crystal on Silicon (L
 * Modified masks can be saved for later use or use in other software
 * The phase function can be displayed on a second monitor to display on the SLM (Windows Only)
 
+![Phase Screenshot] (https://i.imgur.com/Zq2KUgC.png)
