@@ -266,7 +266,7 @@ class main_window:
         """
 
         # Import the image as an array and scale it to go between 0 and 2pi
-        image_array = np.array(self.base_mask_image_label.pil_image.getdata())
+        image_array = np.array(self.base_mask_image_label.pil_image)
         base_mask_size = self.base_mask_image_label.pil_image.size
         image_array = image_array.reshape((base_mask_size[1], base_mask_size[0])).astype('float64')
         if np.max(image_array) == np.min(image_array) == 0:
@@ -422,7 +422,7 @@ class FullScreenDisplay:
         self.pil_image = modified_mask_image
         self.LUT = np.loadtxt(os.path.join(app_directory, LUT_to_use))
         self.wavefront_correction = Image.open(os.path.join(app_directory,wavefront_correction_to_use))
-        self.display_image_array = np.asarray(self.pil_image.getdata())+np.asarray(self.wavefront_correction.getdata())
+        self.display_image_array = np.asarray(self.pil_image)+np.asarray(self.wavefront_correction)
         self.display_image_array = wrap2value(self.display_image_array, 0, 255)
         self.display_image_array = self.display_image_array.reshape((self.pil_image.size[1], self.pil_image.size[0]))
         self.display_image = Image.fromarray(self.display_image_array.astype(np.uint8))
@@ -442,7 +442,7 @@ class FullScreenDisplay:
         :return:
         """
         self.pil_image = pil_image
-        self.display_image_array = np.asarray(self.pil_image.getdata())+np.asarray(self.wavefront_correction.getdata())
+        self.display_image_array = np.asarray(self.pil_image)+np.asarray(self.wavefront_correction)
         self.display_image_array = wrap2value(self.display_image_array, 0, 255)
         self.display_image_array = self.display_image_array.reshape((self.pil_image.size[1], self.pil_image.size[0]))
         self.display_image = Image.fromarray(self.display_image_array.astype(np.uint8))
