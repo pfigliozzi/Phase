@@ -129,7 +129,8 @@ class main_window:
         self.coordinates_bounding_box_size.bind('<FocusOut>', self.update_modified_mask_preview)
         self.coordinates_bounding_box_start.insert(0, '0, 0')
         self.coordinates_bounding_box_size.insert(0, '10, 10')
-        self.disable_bounding_box_widgets()
+        self.coordinates_bounding_box_start.config(state='disabled')
+        self.coordinates_bounding_box_size.config(state='disabled')
 
         self.bounding_box_label_frame.pack()
         self.full_image_checkbox.pack()
