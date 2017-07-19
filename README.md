@@ -8,7 +8,7 @@ A GUI for creating and displaying phase masks for a Liquid Crystal on Silicon (L
 * Modified masks can be saved for later use or use in other software (bitmap images only)
 * The phase function can be displayed on a second monitor to display on the SLM (Windows Only)
 
-![Phase Screenshot] (https://i.imgur.com/Zq2KUgC.png)
+![Phase Screenshot](https://i.imgur.com/Zq2KUgC.png)
 
 ## Getting Started
 1. To start the GUI, download this repository and navigate a CMD Prompt to the "Phase" directory. The GUI can be started with the command "python main_gui.py" entered in the command prompt. (Note: you must have python installed in order for the software to run. I recommend using the [Anaconda Python Distribution](https://store.continuum.io/cshop/anaconda/).)
